@@ -4,11 +4,282 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Project</title>
+  <title>Countries</title>
 </head>
 <body>
+  <!-- SITE-HEADER -->
+  <header class="site-header">
+    <div class="site-header-container container">
+      <a href="index.html" class="site-header-logo">Where in the world?</a>
+      <button class="site-header-theme-toggler" type="button">
+        <span class="site-header-theme-inner">
+          <svg class="site-header-theme-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#fff" fill-rule="evenodd" stroke="currentColor" stroke-width="1.25" d="M13.553 13.815c-3.884 0-7.034-2.887-7.034-6.447 0-1.343.448-2.586 1.212-3.618-3.04.945-5.231 3.581-5.231 6.688 0 3.9 3.45 7.062 7.704 7.062 3.389 0 6.266-2.007 7.296-4.796a7.458 7.458 0 0 1-3.947 1.111Z" clip-rule="evenodd"/></svg>
+          <span class="site-header-theme-toggler-text">Dark Mode</span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN-CONTENT -->
+  <main class="main-content">
+    <div class="container">
+      <section>
+        <!-- <h2>Filters</h2> -->
+        <form action="https://echo.htmlacademy.ru" class="filters" method="GET">
+          <input type="search" class="filters-search-input" name="search" placeholder="Search for a country…" aria-label="Country-name" required>
+          <select name="region" class="filters-region-select" aria-label="Regions">
+            <option selected disabled>Filter by Region</option>
+            <option>Africa</option>
+            <option>America</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>Oceania</option>
+          </select>
+        </form>
+      </section>
+
+      <!-- INDEX-COUNTRIES -->
+      <section class="index-countries">
+        <!-- <h2>Countries</h2> -->
+        <ul class="index-countries-list">
+          <!-- INDEX-COUNTRIES-ITEM -->
+          <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/germany.jpg" alt="Gemany flag" class="index-country-flag" width="264" height="160" srcset="img/germany.jpg 1x, img/germany@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Germany
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">81,770,900</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Europe</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Berlin</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <!-- INDEX-COUNTRIES-ITEM -->
+          <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/usa.jpg" alt="Usa flag" class="index-country-flag" width="264" height="160" srcset="img/usa.jpg 1x, img/usa@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    United States of America
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">323,947,000</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Americas</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Washington, D.C.</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <!-- INDEX-COUNTRIES-ITEM -->
+          <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/brazil.jpg" alt="Brazil flag" class="index-country-flag" width="264" height="160" srcset="img/brazil.jpg 1x, img/brazil@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Brazil
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">206,135,893</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Americas</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Brasília</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <!-- INDEX-COUNTRIES-ITEM -->
+          <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/iceland.jpg" alt="Iceland flag" class="index-country-flag" width="264" height="160" srcset="img/iceland.jpg 1x, img/iceland@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Iceland
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">334,300</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Europe</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Reykjavík</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+            <!-- INDEX-COUNTRIES-ITEM -->
+            <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/afghanistan.jpg" alt="Afghanistan flag" class="index-country-flag" width="264" height="160" srcset="img/afghanistan.jpg 1x, img/afghanistan@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Afghanistan
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">27,657,145</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Asia</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Kabul</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+            <!-- INDEX-COUNTRIES-ITEM -->
+            <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/aland-island.jpg" alt="Aland Island flag" class="index-country-flag" width="264" height="160" srcset="img/aland-island.jpg 1x, img/aland-island@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Åland Islands
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">28,875</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Europe</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Mariehamn</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <!-- INDEX-COUNTRIES-ITEM -->
+          <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/albania.jpg" alt="Albania flag" class="index-country-flag" width="264" height="160" srcset="img/albania.jpg 1x, img/albania@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Albania
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">2,826,026</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Europe</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Tirana</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <!-- INDEX-COUNTRIES-ITEM -->
+          <li class="index-xountries-item">
+            <div class="index-country">
+              <img src="img/algeria.jpg" alt="Algeria flag" class="index-country-flag" width="264" height="160" srcset="img/algeria.jpg 1x, img/algeria@2x.jpg 2x">
+              <div class="index-country-info">
+                <h3 class="index-country-name">
+                  <a href="country.html" class="index-country-link">
+                    Algeria
+                  </a>
+                  </h3>
+                <dl class="index-country-details">
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Population:</dt>
+                    <dd class="index-country-details-value">40,400,000</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Region:</dt>
+                    <dd class="index-country-details-value">Africa</dd>
+                  </div>
+                  <div class="index-country-details-item">
+                    <dt class="index-country-details-title">Capital:</dt>
+                    <dd class="index-country-details-value">Algiers</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+
+
+
+
+
+        </ul>
+      </section>
+    </div>
+  </main>
+
+
 
 
   <script src="js/main.js"></script>

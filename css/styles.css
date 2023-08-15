@@ -1,3 +1,51 @@
+/* CUSTOM PROPS */
+
+:root {
+  --body-bg:#fafafa;
+  --element-bg:#fff;
+  --text-color:#111517;
+
+}
+
+
+/* FONTS */
+@font-face {
+  font-family: 'Nunito Sans 7pt Expanded';
+  src: url('../fonts/NunitoSans7ptExpanded-Regular.woff2') format('woff2'),
+      url('../fonts/NunitoSans7ptExpanded-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt Expanded';
+  src: url('../fonts/NunitoSans7ptExpanded-SemiBold.woff2') format('woff2'),
+      url('../fonts/NunitoSans7ptExpanded-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt Expanded';
+  src: url('../fonts/NunitoSans7ptExpanded-ExtraBold.woff2') format('woff2'),
+      url('../fonts/NunitoSans7ptExpanded-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt Expanded';
+  src: url('../fonts/NunitoSans7ptExpanded-Light.woff2') format('woff2'),
+      url('../fonts/NunitoSans7ptExpanded-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* GLOBAL STYLES */
 
 html {
@@ -18,11 +66,13 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-family: "Nunito Sans" "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  transition: background-color 0.4s ease
+    color 0.4s ease;
 }
 
 img {
@@ -30,13 +80,24 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* DARK MODE */
+.dark-mode {
+  --body-bg:#202c36;
+  --element-bg:#2B3844;
+  --text-color:#fff;
+}
+
 /* CONTAINER */
 
 .container {
   width: 100%;
-  max-width: 1200;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1320px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -45,4 +106,159 @@ img {
 
 .main-content {
   flex-grow: 1;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* SITE-HEADER */
+
+.site-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: var(--element-bg);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+
+}
+.site-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header-logo {
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.site-header-logo:hover {
+  opacity: 0.8;
+}
+
+.site-header-logo:active {
+  opacity: 0.6;
+}
+.site-header-theme-toggler {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-header-theme-toggler:hover {
+  opacity: 0.8;
+}
+
+.site-header-theme-toggler:active {
+  opacity: 0.6;
+}
+.site-header-theme-inner {
+  display: flex;
+  align-items: center;
+}
+.site-header-theme-toggler-text {
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 48px;
+}
+
+.filters-search-input {
+  min-width: 480px;
+  padding: 18px 74px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--element-bg);
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.filters-region-select {
+  min-width: 200px;
+  padding: 18px 24px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  background-color: var(--element-bg);
+  color: var(--text-color);
+}
+
+
+/* INDEX-COUNTRIES */
+
+.index-countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-left: -75px;
+  margin-bottom: -75px;
+  list-style: none;
+
+}
+.index-xountries-item {
+  width: calc(25% - 75px);
+  margin-left: 75px;
+  margin-bottom: 75px;
+}
+.index-country {
+  border-radius: 5px;
+  overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+
+}
+.index-country-flag {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.index-country-info {
+  padding: 24px 24px 48px;
+
+}
+.index-country-name {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight:800;
+}
+
+.index-country-link {
+  color: var(--text-color);
+}
+.index-country-details {
+  margin: 0;
+}
+
+.index-country-details-item {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.index-country-details-item:not(:last-child) {
+  margin-bottom: 8px;
+
+}
+.index-country-details-title {
+  font-weight: 600;
+}
+.index-country-details-value {
+  margin-left: 4px;
 }
